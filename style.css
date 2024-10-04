@@ -1,0 +1,48 @@
+.dark {
+  color-scheme: dark;
+}
+
+.light {
+  color-scheme: light;
+}
+
+section {
+  background: light-dark(#ffffff, #000000);
+  color: light-dark(#000000, #ffffff);
+}
+
+
+
+
+
+
+
+
+
+
+
+@layer support {
+  * {
+    box-sizing: border-box;
+    margin: 0;
+  }
+
+  html {
+    block-size: 100%;
+  }
+
+  body {
+    min-block-size: 100%;
+    font-family: system-ui, sans-serif;
+    display: grid;
+    
+    @media (orientation: landscape) {
+      grid-auto-flow: column;
+    }
+  }
+  
+  section {
+    display: grid;
+    padding: 5vmin;
+  }
+}
